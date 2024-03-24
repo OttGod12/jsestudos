@@ -111,19 +111,76 @@ O escopo determina a acessibilidade de variáveis, objetos e funções de difere
     };
     ```
 - ## Array
-    - Um array é um objeto que armazena uma coleção ordenada de valores. Os valores podem ser de qualquer tipo, incluindo outros arrays, o que permite criar estruturas de dados complexas.
+    - Um array é um objeto que armazena uma coleção ordenada de valores. Os valores podem ser de qualquer tipo, incluindo outros arrays, o que permite criar estruturas de dados complexas. Podem ser comparados com as listas do python.
     ```javascript
     let numeros = [1, 2, 3, 4, 5];
     ```
 
 # Operadores Básicos
+Os operadores são símbolos que realizam operações em variáveis e valores. 
 
 - ## Aritméticos
-    - 
+    - O "+" indica Adição;
+    - O "-" indica Subtração;
+    - O "*" indica Multiplicação;
+    - A "/" indica Divisão;
+    - A "%" indica Módulo (resto da divisão);
+    - Os "**" indicam Exponenciação.
+    ```javascript
+    let a = 10;
+    let b = 5;
+    let soma = a + b; 
+    let produto = a * b; 
+    let resto = a % b;
+    let sub = a - b
+    let divisao = a / b
+    let expo = a ** b
+
+    ```
 - ## De Comparação
-    - 
+    - "==" : Igualdade, não leva em conta o tipo de dado;
+    - "===" : Igualdade estrita, compara valor e tipo de dado;
+    - "!=" : Diferente, não leva em conta o tipo de dado;
+    - "!==" : Diferença estrita, compara valor e tipo de dado;
+    - ">" : Maior que;
+    - "<" : Menor que;
+    - "<=" : Menor ou igual a;
+    - ">=" : Maior ou igual a.
+
+
 - ## Lógicos
-    - 
+    - "&&" : O operador && retorna verdadeiro se ambos os operandos forem verdadeiros. Caso contrário, retorna falso.
+    - "||" : O operador || retorna verdadeiro se pelo menos um dos operandos for verdadeiro. Se ambos forem falsos, retorna falso.
+    - "!" : O operador ! inverte o valor de verdadeiro para falso e vice-versa.
+    ```javascript
+    let a = true;
+    let b = false;
+
+    console.log(a && b); // false
+
+    console.log(a || b); // true
+
+    console.log(!a); // false
+    console.log(!b); // true
+
+    ```
+
+
 - ## Typeof
-    - 
+  Os operadores typeof em JavaScript são utilizados para determinar o tipo de dado de uma variável ou expressão. Eles retornam uma string indicando o tipo de dado. 
+  - typeof undefined: Retorna "undefined" para valores não definidos.
+  - typeof string: Retorna "string" para valores de texto.
+  - typeof number: Retorna "number" para valores numéricos.
+  - typeof boolean: Retorna "boolean" para valores booleanos (true ou false).
+  ```javascript
+  let nome = "João";
+  let idade = 30;
+  console.log(typeof nome); // "string"
+  console.log(typeof idade); // "number"
+  ```
+
+
+
+
+
 
