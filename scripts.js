@@ -53,6 +53,13 @@ for (let btn of btnBotoes){
 
 
 // Botões dos operadores
+for (let btn of btnOperacoes){
+  btn.addEventListener('click', () => {
+      escolheOperador(calculadora, btn.innerText)
+      console.log(btn.innerText)
+  })
+}
+
 
 /****************************************************************
  * Regras da aplicação
@@ -64,7 +71,7 @@ for (let btn of btnBotoes){
  *  O elemento display é atualizado com o atributo operandoAtual
  */
 function atualizaDisplay(calculadora) {
-    calculadora.bufferTextoElemento.innerText = calculadora.operandoAnterior
+    calculadora.bufferTextoElemento.innerText = calculadora.operandoAnterior 
     calculadora.displayTextoElemento.innerText = calculadora.operandoAtual
 
 
@@ -75,6 +82,8 @@ function atualizaDisplay(calculadora) {
  */
 function limpaVariaveis(calculadora) {
     calculadora.operandoAtual = ""
+    calculadora.operandoAnterior = ""
+    calculadora.operador = ""
     atualizaDisplay(calculadora)
 }
 
@@ -96,7 +105,17 @@ function adicionaNumero(calculadora, numero) {
  * - armazenar o operador recebido por parâmetro no atributo operador do objeto calculadora.
  * - copiar operandoAtual para o operandoAnterior, deixando a calculadora preparada para receber o próximo número
  */
-function escolheOperador(calculadora, operador) {}
+function escolheOperador(calculadora, operador) {
+  if (calculadora.operandoAtual != "" && calculadora.operandoAnterior != ""){
+    executaCalculo(calculadora)
+  }
+  calculadora.operador = operador
+  calculadora.operandoAnterior = calculadora.operandoAtual + calculadora.operador
+  calculadora.operandoAtual = ""
+
+  
+  atualizaDisplay(calculadora)
+}
 
 /* A função recebe o objeto calculadora e executa o calculo
  * - Verificar a operação a ser executada
@@ -104,13 +123,21 @@ function escolheOperador(calculadora, operador) {}
  * - Atualizar os atributos operador, operandoAnterior e operandoAtual
  * - Atualizar o display
  */
-function executaCalculo(calculadora) {}
+function executaCalculo(calculadora) {
+  let resultado = ""
+  resultado = eval((calculadora.operandoAnterior) + (calculadora.operandoAtual))
+  calculadora.operandoAtual = resultado
+  calculadora.operandoAnterior = ""
+
+  atualizaDisplay(calculadora)
+  console.log(calculadora)
+}
 
 /* Função chamada quando o botão delete for pressionado
  * Apaga o último dígito digitado no
  */
 function apagaDigito(calculadora) {
-    calculadora.operandoAtual 
+    calculadora.operandoAtual = calculadora.operandoAtual.slice(0,((calculadora.operandoAtual).length)-1)
     atualizaDisplay(calculadora)
 
     
