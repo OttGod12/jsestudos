@@ -2,10 +2,6 @@ const inputTexto = document.querySelector("[input-texto]")
 const btnContar = document.querySelector("[btn-contar]")
 const divContador = document.querySelector("[txt-contador]")
 
-let tipoContagem = "caracteres"
-
-
-
 const handleInputTexto = (evento) => {
     
     
@@ -25,12 +21,12 @@ function handleBtnContar(evento){
 
 inputTexto.addEventListener("input", (evento) => {
 
-    // inputTexto.value.trim().split(/\s+/)
+    
 
     input = evento.target.value
     caractere = input.split('')
-    caractere = String(caractere).replaceAll(",","")
-    palavras = input.split(' ')
+    caractere = inputTexto.value.trim().split(/\s+/)
+    palavras = inputTexto.value.trim().split(/\s+/)
 
     switch (btnContar.innerText) {
         case "Contar Palavras":
@@ -41,7 +37,7 @@ inputTexto.addEventListener("input", (evento) => {
     
         case "Contar Caracteres":
 
-            divContador.innerText = (palavras.length)-1 + " palavras"
+            divContador.innerText = (palavras.length) + " palavras"
 
             break;
         
