@@ -9,10 +9,6 @@ body{
 }
 
 
-
-
-
-
 button{
     background-color: green;
     border: none;
@@ -24,29 +20,60 @@ button{
 
 input{
     padding: 3px;
-    height: 15%;
+    height: 82%;
+    border-radius: 5px;
+    margin: 0;
+    width: 55%;
 }
 
 .container{
-    background-color: white;
+    background-color: rgb(253, 251, 251);
     width: 40vw;
-    height: 30vh;
+    height: 35vh;
     text-align: center;
     border-radius: 5px;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    
-
 }
+
 .titulo{
     width: 100%;
+    height: 30%;
     display: flex;
     justify-content: center;
-   
 }
+
 img{
     width: 45px;
-    margin-top: -30px;
+    height: 45px;
+    margin-top: 22px;
+}
+
+.resultado{
+    /* display: none;  */
+    height: 15%;  
+    width: 100%;  
+}
+
+button{
+    width: 14%;
+    height: 100%;
+}
+.corpo{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    height: 30%;
+    width: 100%;
+    justify-content: center;
+}
+
+.input-result{
+    height: 10px;
+}
+
+p{
+    height: 10px;
 }
