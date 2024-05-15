@@ -52,7 +52,7 @@ img{
 }
 
 .resultado{
-    /* display: none;  */
+    display: none;  
     height: 15%;  
     width: 100%;  
 }
@@ -65,14 +65,11 @@ button{
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    height: 30%;
+    height: 20%;
     width: 100%;
     justify-content: center;
 }
 
-.input-result{
-    height: 10px;
-}
 
 p{
     height: 10px;
