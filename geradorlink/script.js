@@ -6,15 +6,18 @@ const resultado = document.querySelector("[inputResult]")
 const divResult = document.querySelector("[divResultado]")
 
 
-const copiar  = (evento) => {
-  divResult.style = "display: block;"
-  resultado.value = "https://wa.me/55" + numeroTel.value
 
+const copiar  = (evento) => {
+  const numLimpo = numeroTel.value.replace(/[-\s()]/g, "");
+  divResult.style = "display: block;"
+  linkGerado = "https://wa.me/55" + numLimpo
+  resultado.value = linkGerado
+  console.log(linkGerado)
 } 
 
 
 const mandar  = (evento) => {
-  window.open( "https://wa.me/55" + numeroTel.value)
+  window.open(linkGerado)
   
 } 
 
@@ -27,14 +30,18 @@ const campos = (evento) => {
     numeroTel.value = numeroTel.value.replace(/(\d)(\d{4})$/, "$1-$2" )
     numeroTel.style = "color: green"
 
-  }
+  } 
+  else(
+    numeroTel.style = "color = black"
+  )
+
   
 } 
 
 
 
 const txtResultado  = (evento) => {
-  navigator.clipboard.writeText("https://wa.me/55" + numeroTel.value)
+  navigator.clipboard.writeText(linkGerado)
   p.innerText = "Link copiado para a área de tranferência"
 } 
 
