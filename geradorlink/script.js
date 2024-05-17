@@ -25,6 +25,7 @@ const campos = (evento) => {
   if(numeroTel.value.length == 11){
     numeroTel.value = numeroTel.value.replace(/(\d{2})(\d)/, "($1) $2" )
     numeroTel.value = numeroTel.value.replace(/(\d)(\d{4})$/, "$1-$2" )
+    numeroTel.style = "color: green"
 
   }
   
