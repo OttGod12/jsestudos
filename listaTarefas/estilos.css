@@ -19,6 +19,7 @@ input{
     padding-left: 14px;
     border-radius: 10px;
     color: white;
+    border: none
 }
 
 .container1{
@@ -92,6 +93,7 @@ input{
 
 #p1{
     color: #4EA8DE;
+    width: 200px;
 }
 
 #p2{
@@ -106,7 +108,9 @@ input{
     color: #808080;
 }
 
-.tarefas{
+
+
+.numTarefas{
     display: flex;
     width: 96.5%;
     justify-content: space-between;
@@ -114,10 +118,25 @@ input{
 }
 
 #clipboard{
-    margin-left: 7vw;
+    margin-left: 8vw;
 }
 
 .numCriada{
     margin-right: 29vw;
+}
+
+.semTarefa{
+    display: none;
+}
+
+.tarefas{
+    background-color: #333333;
+    color: #F2F2F2;
+    width: 97%;
+    height: 20%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+
 }
 
